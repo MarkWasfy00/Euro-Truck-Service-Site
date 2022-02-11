@@ -1,0 +1,96 @@
+header{
+    .header-top{
+        display: none;
+        @include media(laptop){
+            display: block;
+            .header-c{
+                display: flex;
+                gap: 2rem;
+                justify-content: space-between;
+                border-bottom: 1px solid $grey-10;
+                .block{
+                    display: flex;
+                    gap: 1rem;
+                    color: $grey-70;
+                    &:nth-child(1){
+                        border-right: 1px solid $grey-10;
+                        padding-right: 2rem;
+                    }
+                    &:nth-child(2){
+                        margin-right: auto;
+                    }
+                }
+            }
+            
+        }
+    }    
+}
+
+nav{
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul{
+            display: none;
+            transition: 1s;
+            @include media(tablet){
+                display: flex;
+                gap: 1rem;
+                li{
+                    
+                    a{
+                        color: $grey;
+                        transition: 1s;
+                        &:hover{
+                            color: $grey-70;
+                        }
+                        
+                    }
+                }
+            }
+            @include media(desktop){
+                gap: 3rem;
+            }
+            
+        }
+
+        .mobile-nav{
+            a{
+                display: none;
+                @include media(tablet){
+                    display: inline-block;
+                }
+            }
+            .mobile-tab{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: .5rem;
+                @include media(tablet){
+                    display: none;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+                span{
+                    display: flex;
+                    background-color: $blue;
+                    height: .3rem;
+                    &:nth-child(1){
+                        width: 3rem;
+                    }
+                    &:nth-child(2){
+                        width: 2rem;
+                    }
+                    &:nth-child(3){
+                        width: 1rem;
+                    }
+
+                }
+
+            }
+        }
+    }
+}

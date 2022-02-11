@@ -1,0 +1,39 @@
+
+
+.map{
+    background-color: $off-white;
+}
+
+
+.map-c{
+
+    
+    text-align: center;
+
+    @include media(laptop){
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .map-heading{
+        @include media(laptop){
+            width: 50%;
+        }
+    }
+
+    .map-content{
+        @include media(laptop){
+            width: 50%;
+        }
+        iframe{
+            width: 100%;
+            min-height: 30rem;
+            filter: grayscale(100%);
+            @include media(laptop){
+                min-height: 50rem;
+            }
+            
+        }
+    }
+}

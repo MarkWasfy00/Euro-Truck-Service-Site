@@ -1,0 +1,37 @@
+footer{
+    background-color: $dark;
+    color: $white;
+    .footer-links{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border-bottom: 1px $grey solid;
+        @include media(laptop){
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+        .footer-block{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            
+            .icon{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+    }
+
+    .cp{
+        text-align: center;
+        padding: 2rem 0;
+        @include media(laptop){
+            text-align: left;
+            
+        }
+    }
+}

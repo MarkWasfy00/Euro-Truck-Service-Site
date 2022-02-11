@@ -1,0 +1,46 @@
+.contact{
+    
+    background-color: $blue-8;
+    
+    @include media(laptop){
+        padding: 3rem;
+        background-image: url(../../Static/imgs/contact.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        //min-height: 50rem;
+    }
+    .contact-c{
+        @include media(laptop){
+            display: flex;
+            justify-content: flex-end;
+            
+        }
+    }
+
+    .card{
+        background-color: $white;
+        border-radius: 1rem;
+        text-align: center;
+        padding: 2rem 4rem;
+        @include media(laptop){
+            max-width: 50rem;
+            text-align: left;
+            
+        }
+        &-content{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            input{
+                padding: 1rem;
+                border: none;
+                border-radius: .5rem;
+                background-color: $blue-8;
+                
+            }
+
+        }
+    }
+}

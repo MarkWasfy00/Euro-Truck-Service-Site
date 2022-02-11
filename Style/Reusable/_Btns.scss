@@ -1,0 +1,12 @@
+.btn{
+    color: $white;
+    background-color: $blue;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin: 1rem 0;
+    transition: .3s;
+    &:hover{
+        background-color: darken($blue, 10%);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}

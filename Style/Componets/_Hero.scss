@@ -1,0 +1,44 @@
+.hero{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    .hero-heading{
+        a{
+            width: 100%;
+        }
+    }
+    @include media(laptop){
+        flex-direction: row;
+        min-height: 50rem;
+        text-align: left;
+        .hero-heading{
+            .headline-s{
+                padding-right: 50rem;
+            }
+            p{
+                padding-right: 50rem;
+            }
+            a{
+                width: 20%;
+            }
+        }
+        
+    }
+    @include media(desktop){
+        min-width: 117rem;
+    }
+    
+    
+    .hero-content{
+        @include media(laptop){
+            position: absolute;
+            right: 2rem;
+            z-index: -1;
+        }
+        img{
+            transition: 1s;
+        }
+        
+        margin-right: -2rem;
+    }
+}
